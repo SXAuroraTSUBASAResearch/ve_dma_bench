@@ -1,4 +1,5 @@
 ```
+% make
 % ./mkshm.x86
 % ./bench.ve
 % ipcrm -M 0x19761215
