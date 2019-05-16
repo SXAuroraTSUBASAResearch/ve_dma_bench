@@ -167,17 +167,6 @@ int main(int argc, char* argv[])
                 sz / min / 1e9);
     }
 
-#if 0
-    fprintf(stderr, "ve_dma_post_wait(read): ret=%d\n", ret);
-    fprintf(stderr, "%d\n", *(int*)vemva);
-
-    (*(int*)vemva)++;
-
-    // write
-    ret = ve_dma_post_wait((uint64_t)vehva_vh, vehva_ve, transfer_size);
-    fprintf(stderr, "ve_dma_post_wait(write): ret=%d\n", ret);
-#endif
-
     vh_shmdt(p);
     ve_unregister_mem_from_dmaatb(vehva_ve);
 
