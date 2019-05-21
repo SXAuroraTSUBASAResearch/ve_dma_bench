@@ -67,8 +67,6 @@ int main(int argc, char* argv[])
 
     fprintf(stdout, "Initialize: %8.3lf ms\n", (ti1 - ti0) * 1e3);
 
-    // read
-
     size_t ary[] = { 
         4 * 1024,
         32 * 1024,
@@ -140,7 +138,6 @@ int main(int argc, char* argv[])
 
         for (int j = 0; j < n; ++j) {
             double t0 = second();
-            // read
             int ret = ve_dma_post_wait((uint64_t)vehva_vh, vehva_ve, transfer_size);
             if (ret != 0) {
                 perror("ve_dma_post_wait");
